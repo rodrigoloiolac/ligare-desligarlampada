@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <img id="lampada" src="off.png" alt="desligada">
+    <button id="btnligar" onclick="ligar()">Ligar</button>
+    <button id="btndesligar" onclick="desligar()">Desligar</button>
+
+    <script>
+        
+        let btnligar = document.getElementById("btnligar")
+        
+        //Escutador de Eventos
+        // btnligar.addEventListener("click", ligar)
+        // btndesligar.addEventListener("click", desligar)
+
+        function ligar(){
+            let lampada = document.getElementById("lampada")
+            lampada.src = "on.png"
+        }
+
+        function desligar(){
+            let lampada = document.getElementById("lampada")
+            lampada.src = "off.png"
+        }
+
+        let numero = Math.floor(Math.random()*7+1)
+
+        console.log(numero)
+    </script>
+
+</body>
+</html>
